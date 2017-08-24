@@ -8,16 +8,20 @@
   <label>Student Program</label><input type = "text"[
   (ngModel)] = "studProg"><br>
   <label>Student School Year</label><input type = "text"[
-  (ngM odel)] = "studYr"><br>
+  (ngModel)] = "studYr"><br>
 </div>
 <div id="options">
   <button id="addStudents" (click) = "addStudentEntry()">
     Add Student Entry
   </button>
   <button id="listStudents" (click) = "listStudents()">
-    List Student
+    List Students
   </button>
 </div>
+<div>
+  {{messages}}
+</div>
+
 <div *ngIf = "printing">
   <table>
     <thead>

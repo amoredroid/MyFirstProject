@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'app'; //conditional
   studentCollection: Array<object> = [];
   studentRecord: object;
 
@@ -31,7 +31,11 @@ export class AppComponent {
     const stringPattern = /^[A-z\s]+$/;
     const studNumberPattern = /^[0-9]+$/;
     const studYearPattern = /^[1-5]+$/;
-  if(this.checkPatterns(this.studNo ,studNumberPattern) && this.checkPatterns(this.studFname, stringPattern) && this.checkPatterns(this.studLname, stringPattern) && this.checkPatterns(this.studProg, stringPattern) && this.checkPatterns(this.studYr, studNumberPattern))
+  if(this.checkPatterns(this.studNo ,studNumberPattern) &&
+     this.checkPatterns(this.studFname, stringPattern) &&
+   this.checkPatterns(this.studLname, stringPattern) &&
+    this.checkPatterns(this.studProg, stringPattern) &&
+     this.checkPatterns(this.studYr, studYearPattern))
    {
     this.studentRecord = {
       studNumber: this.studNo,
